@@ -1,0 +1,172 @@
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+  color: #ecedf0;
+  box-sizing: border-box;
+  text-rendering: optimizeSpeed;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 8rem;
+  line-height: 4rem;
+  -webkit-text-stroke-width: 6px;
+  -webkit-text-stroke-color: #35383f;
+  letter-spacing: -1.5px;
+}
+
+.sub-heading,
+p {
+  font-size: 2.4rem;
+  line-height: 1.5rem;
+}
+
+button,
+button:after {
+  font-size: 2rem;
+  line-height: 1.25rem;
+  padding: 2rem 4rem;
+  background-color: #1f6fb0;
+  border-radius: 8px;
+  color: #ecedf0;
+  border: none;
+  position: relative;
+}
+
+button:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5.8rem;
+  width: 100%;
+  background-color: rgb(23.3623188406, 83.652173913, 132.6376811594);
+  z-index: -1;
+}
+
+body {
+  background-color: #404a65;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.coin_image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  width: 13.5rem;
+  height: 13.5rem;
+  perspective: 500px;
+}
+.container:hover > .coin {
+  transform: rotateY(180deg);
+}
+
+.coin {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  perspective: 100px;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+.coin_front, .coin_back {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+.coin_back {
+  transform: rotateY(180deg);
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,33 @@
+@use 'variables' as *;
+
+h1 {
+  @include font(8rem, 4rem);
+  -webkit-text-stroke-width: 6px;
+  -webkit-text-stroke-color: $color_black;
+  letter-spacing: -1.5px;
+}
+.sub-heading,
+p {
+  @include font(2.4rem, 1.5rem);
+}
+button,
+button:after {
+  @include font(2rem, 1.25rem);
+  padding: 2rem 4rem;
+  background-color: $color_azzurro;
+  border-radius: 8px;
+  color: $color_bianco;
+  border: none;
+  position: relative;
+}
+button:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5.8rem;
+  width: 100%;
+  background-color: darken($color_azzurro, 10%);
+  z-index: -1;
+}
