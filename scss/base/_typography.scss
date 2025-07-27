@@ -1,14 +1,16 @@
 @use 'variables' as *;
 
 h1 {
-  @include font(8rem, 4rem);
-  -webkit-text-stroke-width: 6px;
+  @include font(clamp(5rem, 4.333rem + 3.81vw, 8rem), 4rem);
+  -webkit-text-stroke-width: clamp(0.3rem, 0.233rem + 0.381vw, 0.6rem);
   -webkit-text-stroke-color: $color_black;
   letter-spacing: -1.5px;
 }
 .sub-heading,
 p {
-  @include font(2.4rem, 1.5rem);
+  @include font(clamp(1.4rem, 1.178rem + 1.27vw, 2.4rem), 1.5rem);
+  text-align: center;
+  line-height: 1.5;
 }
 button,
 button:after {
@@ -28,6 +30,7 @@ button:after {
   right: 0;
   height: 5.8rem;
   width: 100%;
-  background-color: darken($color_azzurro, 10%);
+  background-color: $color_azzurro;
+  filter: brightness(0.85);
   z-index: -1;
 }

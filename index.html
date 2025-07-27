@@ -26,7 +26,7 @@
       </div>
       <div class="coin_image">
         <div class="container">
-          <div class="coin">
+          <div class="coin" id="coin">
             <div class="coin_front">
               <img src="./resources/heads.svg" alt="coin head" />
             </div>
@@ -39,8 +39,28 @@
           <img src="./resources/shadow.svg" alt="shadow" />
         </div>
       </div>
-      <p class="result">Head</p>
-      <button>RANDOM</button>
+      <p class="result" id="result">Head</p>
+      <button type="button" id="button">RANDOM</button>
     </main>
+    <script>
+      const button = document.getElementById('button');
+      const result = document.getElementById('result');
+      const coin = document.getElementById('coin');
+
+      function rotazione() {
+        const numero = Math.trunc(Math.random() * 10);
+        if (numero <= 4) {
+          result.textContent = 'Head';
+          coin.style.transform = 'rotateY(0deg)';
+        } else {
+          result.textContent = 'Tails';
+          coin.style.transform = 'rotateY(180deg)';
+        }
+        console.log(numero);
+      }
+      coin.onclick = rotazione;
+
+      button.onclick = rotazione;
+    </script>
   </body>
 </html>

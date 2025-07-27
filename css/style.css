@@ -72,17 +72,19 @@ a:active {
 }
 
 h1 {
-  font-size: 8rem;
+  font-size: clamp(5rem, 4.333rem + 3.81vw, 8rem);
   line-height: 4rem;
-  -webkit-text-stroke-width: 6px;
+  -webkit-text-stroke-width: clamp(0.3rem, 0.233rem + 0.381vw, 0.6rem);
   -webkit-text-stroke-color: #35383f;
   letter-spacing: -1.5px;
 }
 
 .sub-heading,
 p {
-  font-size: 2.4rem;
+  font-size: clamp(1.4rem, 1.178rem + 1.27vw, 2.4rem);
   line-height: 1.5rem;
+  text-align: center;
+  line-height: 1.5;
 }
 
 button,
@@ -105,16 +107,20 @@ button:after {
   right: 0;
   height: 5.8rem;
   width: 100%;
-  background-color: rgb(23.3623188406, 83.652173913, 132.6376811594);
+  background-color: #1f6fb0;
+  filter: brightness(0.85);
   z-index: -1;
 }
 
 body {
   background-color: #404a65;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 main {
-  height: 100%;
+  height: 80%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -146,9 +152,6 @@ img {
   width: 13.5rem;
   height: 13.5rem;
   perspective: 500px;
-}
-.container:hover > .coin {
-  transform: rotateY(180deg);
 }
 
 .coin {
